@@ -1,0 +1,67 @@
+/* Сетка фоновой разметки на главном экране */
+.sport-grid-bg {
+    background-image: radial-gradient(circle at 1px 1px, #3b82f615 1px, transparent 0);
+    background-size: 24px 24px;
+}
+
+/* Кастомизация скроллбара */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #0B1530;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #0EA5E9;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #06B6D4;
+}
+
+/* Высота интерактивной карты */
+#map {
+    height: 500px;
+    z-index: 10;
+}
+
+/* Фикс позиционирования Leaflet элементов */
+.leaflet-container {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Анимация пульсации для фоновых кругов */
+@keyframes pulse-fast {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+}
+
+.pulse-accent {
+    animation: pulse-fast 4s infinite ease-in-out;
+}
+
+/* Плавный эффект выцветания/появления окон */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97) translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
